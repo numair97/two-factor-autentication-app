@@ -1,4 +1,3 @@
-// src/components/TwoFactorAuthItem.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { observer } from 'mobx-react-lite';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
@@ -29,7 +28,7 @@ const TwoFactorAuthItem: React.FC<TwoFactorAuthItemProps> = observer(({ code }) 
     if (isExpired) {
       intervalId = setInterval(() => {
         regenerateCode();
-      }, 60000); // Regenerate after 60 seconds
+      }, 60000);
     }
 
     return () => {
