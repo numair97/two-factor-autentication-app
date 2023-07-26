@@ -15,7 +15,7 @@ const AddCodePage = () => {
     }
   };
   return (
-    <div>
+    <div className="container">
       <h2>Add New 2FA Code</h2>
       <input
         type="text"
