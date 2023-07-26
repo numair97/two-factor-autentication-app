@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { observer } from 'mobx-react-lite';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import authStore from '../store/AuthStore';
+import Google from '../google.svg';
 
 interface TwoFactorAuthItemProps {
   code: string;
@@ -38,6 +39,7 @@ const TwoFactorAuthItem: React.FC<TwoFactorAuthItemProps> = observer(({ code }) 
 
   return (
     <div className={`auth-code-item ${isExpired ? 'regenerating' : ''}`}>
+      <img src={Google} alt='icon'/>
       <span>{regeneratedCodeRef.current || code}</span>
       {!isExpired ? (
           <CountdownCircleTimer
